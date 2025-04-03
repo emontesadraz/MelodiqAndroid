@@ -1,4 +1,4 @@
-package com.example.melodiqandroid.ui.notifications
+package com.example.melodiqandroid.ui.metronome
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.melodiqandroid.databinding.FragmentNotificationsBinding
 
-class NotificationsFragment : Fragment() {
+class MetronomeFragment : Fragment() {
 
     private var _binding: FragmentNotificationsBinding? = null
 
@@ -23,7 +23,7 @@ class NotificationsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val notificationsViewModel =
-            ViewModelProvider(this).get(NotificationsViewModel::class.java)
+            ViewModelProvider(this).get(MetronomeViewModel::class.java)
 
         _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
         val root: View = binding.root

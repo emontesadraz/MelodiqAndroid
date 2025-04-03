@@ -13,13 +13,13 @@
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.example.melodiqandroid.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
+        android:name="com.example.melodiqandroid.ui.tuner.DashboardFragment"
+        android:label="@string/title_tuner"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.example.melodiqandroid.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
+        android:name="com.example.melodiqandroid.ui.metronome.MetronomeFragment"
+        android:label="@string/title_metronome"
         tools:layout="@layout/fragment_notifications" />
 </navigation>
