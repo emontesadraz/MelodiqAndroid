@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 class MetronomeViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is notifications Fragment"
+        value = "Esto es un metrónomo"
     }
     val text: LiveData<String> = _text
 }
