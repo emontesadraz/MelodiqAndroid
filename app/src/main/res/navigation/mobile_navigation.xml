@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.example.melodiqandroid.ui.metronome.MetronomeFragment"
+        android:name="com.example.melodiqandroid.ui.metronome.view.MetronomeFragment"
         android:label="@string/title_metronome"
         tools:layout="@layout/fragment_notifications" />
 </navigation>
