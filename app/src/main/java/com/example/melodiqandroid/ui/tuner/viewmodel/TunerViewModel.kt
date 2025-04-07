@@ -1,4 +1,4 @@
-package com.example.melodiqandroid.ui.tuner
+package com.example.melodiqandroid.ui.tuner.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

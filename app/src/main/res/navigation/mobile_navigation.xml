@@ -13,7 +13,7 @@
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.example.melodiqandroid.ui.tuner.DashboardFragment"
+        android:name="com.example.melodiqandroid.ui.tuner.view.DashboardFragment"
         android:label="@string/title_tuner"
         tools:layout="@layout/fragment_dashboard" />
 
