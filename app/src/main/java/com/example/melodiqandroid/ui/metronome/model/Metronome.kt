@@ -9,6 +9,9 @@ class Metronome(private val soundManager: SoundManager) {
     private val delay: Long get() = 60000L / bpm // ms por pulso
 
     /**
+     * Devuelve el BPM actual del metrónomo.
+     */
+    /**
      * Cambia el BPM del metrónomo.
      * @param newBpm El nuevo BPM. Debe estar entre 40 y 208.
      */
