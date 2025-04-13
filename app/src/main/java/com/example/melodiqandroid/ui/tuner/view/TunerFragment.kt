@@ -29,7 +29,7 @@ class TunerFragment : Fragment() {
         _binding = FragmentTunerBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textDashboard
+        val textView: TextView = binding.bpmText
         tunerViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }

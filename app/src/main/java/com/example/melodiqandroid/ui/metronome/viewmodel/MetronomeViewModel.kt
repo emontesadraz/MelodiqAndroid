@@ -1,26 +1,19 @@
 package com.example.melodiqandroid.ui.metronome.viewmodel
 
-import android.content.Context
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.melodiqandroid.ui.metronome.model.Metronome
 import com.example.melodiqandroid.ui.metronome.utils.SoundManager
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 
-class MetronomeViewModel(private val context: Context) : ViewModel() {
+class MetronomeViewModel(application: Application) : AndroidViewModel(application) {
 
-    // Constantes
-    companion object {
-        const val MIN_BPM = 40
-        const val MAX_BPM = 208
-        const val DEFAULT_BPM = 60
-    }
-
-    // Modelo del metrónomo
-    private val metronome = Metronome(SoundManager(context))
+    // Modelo del metrónomo (usa getApplication() para el contexto)
+    private val metronome = Metronome(SoundManager(application))
     private var metronomeJob: Job? = null
 
     // LiveData para la UI
@@ -56,12 +49,9 @@ class MetronomeViewModel(private val context: Context) : ViewModel() {
         metronome.stop()
     }
 
-    fun toggleMetronome() {
-        if (_isPlaying.value == true) {
-            stopMetronome()
-        } else {
-            startMetronome()
-        }
+    companion object {
+        const val MIN_BPM = 40
+        const val MAX_BPM = 208
+        const val DEFAULT_BPM = 60
     }
-
 }

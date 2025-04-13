@@ -5,49 +5,50 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.SeekBar
-import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
-import com.example.melodiqandroid.R
+import com.example.melodiqandroid.databinding.FragmentMetronomeBinding
 import com.example.melodiqandroid.ui.metronome.viewmodel.MetronomeViewModel
 
 class MetronomeFragment : Fragment() {
 
-    private lateinit var metronomeViewModel: MetronomeViewModel
+    private var _binding: FragmentMetronomeBinding? = null
+    private val binding get() = _binding!!
+    private val viewModel: MetronomeViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val root = inflater.inflate(R.layout.fragment_metronome, container, false)
+        _binding = FragmentMetronomeBinding.inflate(inflater, container, false)
+        return binding.root
+    }
 
-        // Inicializa el ViewModel
-        metronomeViewModel = ViewModelProvider(this).get(MetronomeViewModel::class.java)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-        // Referencias a los elementos de la UI
-        val bpmText = root.findViewById<TextView>(R.id.bpmText)
-        val seekBar = root.findViewById<SeekBar>(R.id.seekBar)
+        // Configuración inicial
+        binding.bpmText.text = "${viewModel.bpm.value} BPM"
 
-        // Observa los cambios en el LiveData de BPM
-        metronomeViewModel.bpm.observe(viewLifecycleOwner) { bpm ->
-            bpmText.text = "BPM: $bpm"
-            seekBar.progress = bpm
+        // Listeners
+        binding.startButton.setOnClickListener {
+            viewModel.startMetronome()
         }
 
-        // Configura el SeekBar
-        seekBar.max = MetronomeViewModel.MAX_BPM - MetronomeViewModel.MIN_BPM
-        seekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
-            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-                if (fromUser) {
-                    metronomeViewModel.setBpm(progress + MetronomeViewModel.MIN_BPM)
-                }
-            }
+        binding.stopButton.setOnClickListener {
+            viewModel.stopMetronome()
+        }
 
-            override fun onStartTrackingTouch(seekBar: SeekBar?) {}
-            override fun onStopTrackingTouch(seekBar: SeekBar?) {}
-        })
+        // Observadores
+        viewModel.bpm.observe(viewLifecycleOwner) { bpm ->
+            binding.bpmText.text = "$bpm BPM"
+        }
+    }
 
-        return root
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
