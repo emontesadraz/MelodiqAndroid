@@ -29,7 +29,7 @@ class MetronomeViewModel(application: Application) : AndroidViewModel(applicatio
     // Configuración del BPM
     fun setBpm(newBpm: Int) {
         val clampedBpm = newBpm.coerceIn(MIN_BPM, MAX_BPM)
-        _bpm.value = clampedBpm
+        _bpm.value = clampedBpm  // ¡Esta línea es crucial!
         metronome.setBpm(clampedBpm)
     }
 
