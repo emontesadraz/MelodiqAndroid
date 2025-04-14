@@ -45,8 +45,8 @@ class MetronomeViewModel(application: Application) : AndroidViewModel(applicatio
 
     fun stopMetronome() {
         _isPlaying.value = false
-        metronomeJob?.cancel()
-        metronome.stop()
+        metronomeJob?.cancel()  // Cancela la corrutina
+        metronome.stop()       // Detiene el modelo del metrónomo
     }
 
     companion object {
