@@ -57,6 +57,11 @@ class MetronomeFragment : Fragment() {
         binding.stopButton.setOnClickListener {
             viewModel.stopMetronome()
         }
+        // Observador para el estado de reproducción
+        viewModel.isPlaying.observe(viewLifecycleOwner) { isPlaying ->
+            binding.stopButton.isEnabled = isPlaying
+            binding.startButton.isEnabled = !isPlaying
+        }
     }
 
     override fun onDestroyView() {
