@@ -13,8 +13,15 @@ import kotlinx.coroutines.launch
 class MetronomeViewModel(application: Application) : AndroidViewModel(application) {
 
     // Modelo del metrónomo (usa getApplication() para el contexto)
+    private val soundManager = SoundManager(application)
     private val metronome = Metronome(SoundManager(application))
     private var metronomeJob: Job? = null
+
+    // Liberamos recursos del sounPool
+    override fun onCleared() {
+        super.onCleared()
+        soundManager.release()
+    }
 
     // LiveData para la UI
     private val _bpm = MutableLiveData<Int>(DEFAULT_BPM)

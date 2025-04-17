@@ -5,28 +5,23 @@ import android.media.SoundPool
 import com.example.melodiqandroid.R
 
 class SoundManager(context: Context) {
-    private val soundPool = SoundPool.Builder().setMaxStreams(1).build()
-    private var tickId = 0
+    private val soundPool: SoundPool
+    private var tickSoundId: Int = 0
 
-    /**
-     * Cargar el sonido del metrónomo.
-     */
-    /* init {
-        tickId = soundPool.load(context, R.raw.sonidoDescargadoMetronomo, 1) // Añade tu sonido en /res/raw/
+    init {
+        soundPool = SoundPool.Builder()
+            .setMaxStreams(1)  // Solo necesitamos un sonido a la vez
+            .build()
+
+        // Carga el sonido
+        tickSoundId = soundPool.load(context, R.raw.metronomo_click, 1)
     }
 
-     */
-
-    /**
-     * El sonido del click del metrónomo.
-     */
     fun playTick() {
-        soundPool.play(tickId, 1f, 1f, 1, 0, 1f)
+        // Reproduce el sonido (volumen al 100% en ambos canales)
+        soundPool.play(tickSoundId, 1.0f, 1.0f, 1, 0, 1.0f)
     }
 
-    /**
-     * Libera los recursos del SoundPool.
-     */
     fun release() {
         soundPool.release()
     }
