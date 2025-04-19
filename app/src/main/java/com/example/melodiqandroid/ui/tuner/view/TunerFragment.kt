@@ -57,6 +57,7 @@ class TunerFragment : Fragment() {
     private fun setupObservers() {
         tunerViewModel.noteData.observe(viewLifecycleOwner) { noteData ->
             binding.txtNote.text = noteData.note
+            binding.txtFrequency.text = String.format("%.1f Hz", noteData.frequency)
             binding.txtCents.text = "${noteData.cents.toInt()} cents"
 
             // Actualizar el medidor (progress bar)

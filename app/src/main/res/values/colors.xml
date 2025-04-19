@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="icon_color">#F17A36</color>
     <color name="text_color">#F1EDE6</color>
+    <color name="stop_color">#A60707</color>
 </resources>
