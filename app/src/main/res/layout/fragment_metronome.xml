@@ -108,7 +108,7 @@
                                 android:id="@+id/stopButton"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:backgroundTint="#F44336"
+                                android:backgroundTint="@color/stop_color"
                                 android:enabled="false"
                                 android:fontFamily="sans-serif-light"
                                 android:text="Detener" />
