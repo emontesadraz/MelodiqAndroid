@@ -26,7 +26,7 @@ class TunerViewModel : ViewModel() {
     private var tunerJob: Job? = null
     private val coroutineScope = CoroutineScope(Dispatchers.Main + SupervisorJob())
 
-    fun PeqstartListening() {
+    fun startListening() {
         if (_isListening.value == true) return
 
         tunerProcessor.start()

@@ -22,8 +22,7 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
+        val homeViewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
@@ -32,6 +31,17 @@ class HomeFragment : Fragment() {
         homeViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
+
+        val textView2: TextView = binding.textHome2
+        homeViewModel.text2.observe(viewLifecycleOwner) {
+            textView2.text = it
+        }
+
+        val titleView: TextView = binding.Title
+        homeViewModel.title.observe(viewLifecycleOwner) {
+            titleView.text = it
+        }
+
         return root
     }
 
