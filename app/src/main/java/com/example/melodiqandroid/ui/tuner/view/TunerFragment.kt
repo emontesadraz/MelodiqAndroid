@@ -1,11 +1,14 @@
 package com.example.melodiqandroid.ui.tuner.view
 
 import android.Manifest
+import android.animation.ValueAnimator
 import android.content.pm.PackageManager
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.DecelerateInterpolator
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
@@ -21,6 +24,7 @@ class TunerFragment : Fragment() {
     private val binding get() = _binding!!
 
     private lateinit var tunerViewModel: TunerViewModel
+    private var needleAnimator: ValueAnimator? = null
 
     private val requestPermissionLauncher = registerForActivityResult(
         ActivityResultContracts.RequestPermission()
@@ -56,25 +60,48 @@ class TunerFragment : Fragment() {
 
     private fun setupObservers() {
         tunerViewModel.noteData.observe(viewLifecycleOwner) { noteData ->
-            binding.txtNote.text = noteData.note
+            // Extraer nombre de nota y octava
+            val noteName = noteData.note.replace("\\d".toRegex(), "")
+            val octave = noteData.note.replace("\\D".toRegex(), "")
+
+            binding.txtNote.text = noteName
+            binding.txtOctave.text = octave
             binding.txtFrequency.text = String.format("%.1f Hz", noteData.frequency)
-            binding.txtCents.text = "${noteData.cents.toInt()} cents"
+            binding.txtCents.text = "${noteData.cents.toInt()}¢"
 
-            // Actualizar el medidor (progress bar)
-            // Convertimos los cents (-50 a +50) a un valor de progreso (0 a 100)
-            val progressValue = ((noteData.cents + 50) * 100) / 100
-            binding.tunerMeter.progress = progressValue.toInt().coerceIn(0, 100)
+            // Calcular la rotación de la aguja basada en los cents
+            // Los cents varían de -50 a +50, y queremos que la aguja rote aproximadamente 90 grados
+            val rotationDegrees = (noteData.cents * 1.8f).coerceIn(-90f, 90f)
 
-            // Cambiamos el color según qué tan afinado está
+            // Animar la aguja suavemente
+            animateNeedle(rotationDegrees)
+
+            // Cambiar el color de la línea central según la afinación
             if (abs(noteData.cents) < 5) {
-                binding.txtNote.setTextColor(ContextCompat.getColor(requireContext(), android.R.color.holo_green_dark))
+                binding.centerLine.setBackgroundColor(Color.parseColor("#00AA00")) // Verde
+                binding.txtCents.setTextColor(Color.parseColor("#00AA00"))
             } else {
-                binding.txtNote.setTextColor(ContextCompat.getColor(requireContext(), android.R.color.black))
+                binding.centerLine.setBackgroundColor(Color.parseColor("#000000")) // Negro
+                binding.txtCents.setTextColor(Color.parseColor("#444444"))
             }
         }
 
         tunerViewModel.isListening.observe(viewLifecycleOwner) { isListening ->
             binding.btnToggleTuner.text = if (isListening) "Detener" else "Iniciar"
+        }
+    }
+
+    private fun animateNeedle(targetRotation: Float) {
+        needleAnimator?.cancel()
+
+        val currentRotation = binding.tunerNeedle.rotation
+        needleAnimator = ValueAnimator.ofFloat(currentRotation, targetRotation).apply {
+            duration = 150 // Duración corta para que se sienta responsive
+            interpolator = DecelerateInterpolator()
+            addUpdateListener { animation ->
+                binding.tunerNeedle.rotation = animation.animatedValue as Float
+            }
+            start()
         }
     }
 
@@ -116,6 +143,8 @@ class TunerFragment : Fragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
+        needleAnimator?.cancel()
+        needleAnimator = null
         _binding = null
     }
 

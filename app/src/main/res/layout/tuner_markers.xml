@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Marcas pequeñas a la izquierda -->
+    <View
+        android:id="@+id/mark_minus_10"
+        android:layout_width="1dp"
+        android:layout_height="15dp"
+        android:background="#444444"
+        app:layout_constraintBottom_toBottomOf="@+id/tuner_scale_background"
+        app:layout_constraintStart_toStartOf="@+id/tuner_scale_background"
+        app:layout_constraintEnd_toStartOf="@+id/center_line"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintTop_toTopOf="@+id/tuner_scale_background" />
+
+    <View
+        android:id="@+id/mark_minus_20"
+        android:layout_width="1dp"
+        android:layout_height="15dp"
+        android:background="#444444"
+        app:layout_constraintBottom_toBottomOf="@+id/tuner_scale_background"
+        app:layout_constraintStart_toStartOf="@+id/tuner_scale_background"
+        app:layout_constraintEnd_toStartOf="@+id/center_line"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintTop_toTopOf="@+id/tuner_scale_background" />
+
+    <View
+        android:id="@+id/mark_minus_30"
+        android:layout_width="1dp"
+        android:layout_height="15dp"
+        android:background="#444444"
+        app:layout_constraintBottom_toBottomOf="@+id/tuner_scale_background"
+        app:layout_constraintStart_toStartOf="@+id/tuner_scale_background"
+        app:layout_constraintEnd_toStartOf="@+id/center_line"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintTop_toTopOf="@+id/tuner_scale_background" />
+
+    <View
+        android:id="@+id/mark_minus_40"
+        android:layout_width="1dp"
+        android:layout_height="15dp"
+        android:background="#444444"
+        app:layout_constraintBottom_toBottomOf="@+id/tuner_scale_background"
+        app:layout_constraintStart_toStartOf="@+id/tuner_scale_background"
+        app:layout_constraintEnd_toStartOf="@+id/center_line"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintTop_toTopOf="@+id/tuner_scale_background" />
+
+    <!-- Marcas pequeñas a la derecha -->
+    <View
+        android:id="@+id/mark_plus_10"
+        android:layout_width="1dp"
+        android:layout_height="15dp"
+        android:background="#444444"
+        app:layout_constraintBottom_toBottomOf="@+id/tuner_scale_background"
+        app:layout_constraintStart_toEndOf="@+id/center_line"
+        app:layout_constraintEnd_toEndOf="@+id/tuner_scale_background"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintTop_toTopOf="@+id/tuner_scale_background" />
+
+    <View
+        android:id="@+id/mark_plus_20"
+        android:layout_width="1dp"
+        android:layout_height="15dp"
+        android:background="#444444"
+        app:layout_constraintBottom_toBottomOf="@+id/tuner_scale_background"
+        app:layout_constraintStart_toEndOf="@+id/center_line"
+        app:layout_constraintEnd_toEndOf="@+id/tuner_scale_background"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintTop_toTopOf="@+id/tuner_scale_background" />
+
+    <View
+        android:id="@+id/mark_plus_30"
+        android:layout_width="1dp"
+        android:layout_height="15dp"
+        android:background="#444444"
+        app:layout_constraintBottom_toBottomOf="@+id/tuner_scale_background"
+        app:layout_constraintStart_toEndOf="@+id/center_line"
+        app:layout_constraintEnd_toEndOf="@+id/tuner_scale_background"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintTop_toTopOf="@+id/tuner_scale_background" />
+
+    <View
+        android:id="@+id/mark_plus_40"
+        android:layout_width="1dp"
+        android:layout_height="15dp"
+        android:background="#444444"
+        app:layout_constraintBottom_toBottomOf="@+id/tuner_scale_background"
+        app:layout_constraintStart_toEndOf="@+id/center_line"
+        app:layout_constraintEnd_toEndOf="@+id/tuner_scale_background"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintTop_toTopOf="@+id/tuner_scale_background" />
+</merge>
