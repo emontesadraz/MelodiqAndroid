@@ -6,7 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.example.melodiqandroid.ui.metronome.model.Metronome
-import com.example.melodiqandroid.ui.metronome.utils.SoundManager
+import com.example.melodiqandroid.ui.utils.SoundManager
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 

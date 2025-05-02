@@ -1,4 +1,4 @@
-package com.example.melodiqandroid.ui.tuner.utils
+package com.example.melodiqandroid.ui.tuner.model
 
 import android.annotation.SuppressLint
 import android.media.AudioFormat

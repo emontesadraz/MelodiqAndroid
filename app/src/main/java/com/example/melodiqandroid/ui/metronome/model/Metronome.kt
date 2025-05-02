@@ -1,6 +1,6 @@
 package com.example.melodiqandroid.ui.metronome.model
 
-import com.example.melodiqandroid.ui.metronome.utils.SoundManager
+import com.example.melodiqandroid.ui.utils.SoundManager
 import kotlinx.coroutines.delay
 
 class Metronome(private val soundManager: SoundManager) {

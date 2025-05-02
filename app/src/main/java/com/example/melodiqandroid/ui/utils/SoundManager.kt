@@ -1,4 +1,4 @@
-package com.example.melodiqandroid.ui.metronome.utils
+package com.example.melodiqandroid.ui.utils
 
 import android.content.Context
 import android.media.SoundPool

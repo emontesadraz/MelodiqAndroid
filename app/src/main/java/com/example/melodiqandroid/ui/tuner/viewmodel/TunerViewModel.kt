@@ -3,7 +3,7 @@ package com.example.melodiqandroid.ui.tuner.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.melodiqandroid.ui.tuner.utils.TunerProcessor
+import com.example.melodiqandroid.ui.tuner.model.TunerProcessor
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -26,7 +26,7 @@ class TunerViewModel : ViewModel() {
     private var tunerJob: Job? = null
     private val coroutineScope = CoroutineScope(Dispatchers.Main + SupervisorJob())
 
-    fun startListening() {
+    fun PeqstartListening() {
         if (_isListening.value == true) return
 
         tunerProcessor.start()
