@@ -22,4 +22,9 @@
         android:name="com.example.melodiqandroid.ui.metronome.view.MetronomeFragment"
         android:label="@string/title_metronome"
         tools:layout="@layout/fragment_metronome" />
+    <fragment
+        android:id="@+id/navigation_chords_library"
+        android:name="com.example.melodiqandroid.ui.chords.view.ChordsFragment"
+        android:label="@string/title_chords_library"
+        tools:layout="@layout/fragment_chords_library" />
 </navigation>
