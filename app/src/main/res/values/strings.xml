@@ -3,4 +3,5 @@
     <string name="title_home">Inicio</string>
     <string name="title_tuner">Afinador</string>
     <string name="title_metronome">Metrónomo</string>
+    <string name="title_chords_library">Acordes</string>
 </resources>

@@ -2,7 +2,13 @@
 <resources>
     <!-- Tema principal de tu aplicación -->
     <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <item name="colorPrimary">@color/ic_melodiq_background</item> <!-- Color de la ActionBar -->
+        <item name="colorPrimary">@color/text_color</item> <!-- Color de la ActionBar -->
         <item name="colorPrimaryDark">@color/icon_color</item> <!-- Color de la barra de estado -->
+        <item name="android:windowBackground">@color/ic_melodiq_background</item> <!-- Color de fondo de la ventana -->
+        <item name="android:statusBarColor">@color/icon_color</item> <!-- Color de la barra de estado -->
+        <item name="android:colorBackground">@color/text_color</item> <!-- Color de fondo de la aplicación -->
+    </style>
+    <style name="BottomNavigationViewStyle" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="itemIconTint">@null</item>
     </style>
 </resources>
