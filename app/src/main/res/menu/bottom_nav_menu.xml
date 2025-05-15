@@ -1,30 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    style="@style/BottomNavigationViewStyle">
+        <menu xmlns:android="http://schemas.android.com/apk/res/android">
+            <item
+                android:id="@+id/navigation_home"
+                android:icon="@drawable/ic_home_24dp"
+                android:title="@string/title_home" />
 
-    <item
-        android:id="@+id/navigation_home"
-        android:icon="@drawable/ic_home_24dp"
-        android:title="@string/title_home"
-        app:iconTint="@null"/>
+            <item
+                android:id="@+id/navigation_dashboard"
+                android:icon="@drawable/ic_tuner"
+                android:title="@string/title_tuner" />
 
-    <item
-        android:id="@+id/navigation_dashboard"
-        android:icon="@drawable/ic_tuner"
-        android:title="@string/title_tuner"
-        app:iconTint="@null"/>
+            <item
+                android:id="@+id/navigation_notifications"
+                android:icon="@drawable/ic_metronome"
+                android:title="@string/title_metronome" />
 
-    <item
-        android:id="@+id/navigation_notifications"
-        android:icon="@drawable/ic_metronome"
-        android:title="@string/title_metronome"
-        app:iconTint="@null"/>
-
-    <item
-        android:id="@+id/navigation_chords_library"
-        android:icon="@drawable/iconoacordes"
-        android:title="@string/title_chords_library"
-        app:iconTint="@null"/>
-
-</menu>
+            <item
+                android:id="@+id/navigation_chords_library"
+                android:icon="@drawable/iconoacordes"
+                android:title="@string/title_chord_library" />
+        </menu>

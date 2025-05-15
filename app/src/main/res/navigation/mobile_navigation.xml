@@ -1,30 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    <navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/mobile_navigation"
+        app:startDestination="@+id/navigation_home">
 
-    <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.example.melodiqandroid.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        <fragment
+            android:id="@+id/navigation_home"
+            android:name="com.example.melodiqandroid.ui.home.HomeFragment"
+            android:label="@string/title_home"
+            tools:layout="@layout/fragment_home" />
 
-    <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.melodiqandroid.ui.tuner.view.TunerFragment"
-        android:label="@string/title_tuner"
-        tools:layout="@layout/fragment_tuner" />
+        <fragment
+            android:id="@+id/navigation_dashboard"
+            android:name="com.example.melodiqandroid.ui.tuner.view.TunerFragment"
+            android:label="@string/title_tuner"
+            tools:layout="@layout/fragment_tuner" />
 
-    <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.melodiqandroid.ui.metronome.view.MetronomeFragment"
-        android:label="@string/title_metronome"
-        tools:layout="@layout/fragment_metronome" />
-    <fragment
-        android:id="@+id/navigation_chords_library"
-        android:name="com.example.melodiqandroid.ui.chords.view.ChordsFragment"
-        android:label="@string/title_chords_library"
-        tools:layout="@layout/fragment_chords_library" />
-</navigation>
+        <fragment
+            android:id="@+id/navigation_notifications"
+            android:name="com.example.melodiqandroid.ui.metronome.view.MetronomeFragment"
+            android:label="@string/title_metronome"
+            tools:layout="@layout/fragment_metronome" />
+
+        <fragment
+                    android:id="@+id/navigation_chords_library"
+                    android:name="com.example.melodiqandroid.ui.chords.view.ChordLibraryFragment"
+                    android:label="@string/title_chords_library"
+                    tools:layout="@layout/fragment_chord_library">
+
+                    <action
+                        android:id="@+id/action_chord_library_to_chord_detail"
+                        app:destination="@id/navigation_chord_detail" />
+                </fragment>
+
+                <fragment
+                    android:id="@+id/navigation_chord_detail"
+                    android:name="com.example.melodiqandroid.ui.chords.view.ChordDetailFragment"
+                    android:label="Detalle del Acorde"
+                    tools:layout="@layout/fragment_chord_detail" />
+    </navigation>

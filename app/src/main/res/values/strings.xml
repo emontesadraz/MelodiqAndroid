@@ -1,7 +1,12 @@
 <resources>
-    <string name="app_name">Melodiq</string>
+    <!-- Strings existentes -->
+    <string name="app_name">MelodiQ</string>
     <string name="title_home">Inicio</string>
-    <string name="title_tuner">Afinador</string>
     <string name="title_metronome">Metrónomo</string>
-    <string name="title_chords_library">Acordes</string>
+    <string name="title_tuner">Afinador</string>
+
+    <!-- Nuevos strings para la biblioteca de acordes -->
+    <string name="title_chords_library">Biblioteca de Acordes</string>
+    <string name="title_chord_library">Acordes</string>
+    <string name="title_chord_detail">Detalle de Acorde</string>
 </resources>

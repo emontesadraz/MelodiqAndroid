@@ -14,7 +14,6 @@ class ChordsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Infla el diseño del fragmento
-        return inflater.inflate(R.layout.fragment_chords_library, container, false)
+        return inflater.inflate(R.layout.fragment_chords, container, false)
     }
 }
