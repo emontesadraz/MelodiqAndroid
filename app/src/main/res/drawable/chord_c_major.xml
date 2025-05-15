@@ -81,26 +81,13 @@
 
             <!-- Círculos vacíos para indicar cuerdas que se tocan abiertas -->
             <path
-                android:strokeColor="@color/icon_color"
+                android:strokeColor="@color/text_color"
                 android:strokeWidth="1.5"
-                android:fillColor="@color/text_color"
+                android:fillColor="@color/ic_melodiq_background"
                 android:pathData="M120,20 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0"/>
             <path
-                android:strokeColor="@color/icon_color"
+                android:strokeColor="@color/text_color"
                 android:strokeWidth="1.5"
-                android:fillColor="@color/icon_color"
+                android:fillColor="@color/ic_melodiq_background"
                 android:pathData="M160,20 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0"/>
-
-            <!-- Nombre del acorde -->
-            <path
-                android:fillColor="@color/icon_color"
-                android:pathData="M92,220h16v2h-16z"/>
-            <path
-                android:fillColor="@color/text_color"
-                android:pathData="M100,15
-                                  a10,10 0 0,1 0,20
-                                  a10,10 0 0,1 0,-20z
-                                  M100,17
-                                  a8,8 0 0,0 0,16
-                                  a8,8 0 0,0 0,-16z"/>
         </vector>

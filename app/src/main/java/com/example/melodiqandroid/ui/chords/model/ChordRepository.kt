@@ -28,8 +28,8 @@ class ChordRepository {
     private val mockChords = listOf(
         // Acordes Mayores
         Chord(1, "C", "Do Mayor", ChordType.MAJOR, Note.C, R.drawable.chord_c_major, R.raw.chord_c_major),
-        //Chord(2, "D", "Re Mayor", ChordType.MAJOR, Note.D, R.drawable.chord_d_major, R.raw.chord_d_major),
-        //Chord(3, "E", "Mi Mayor", ChordType.MAJOR, Note.E, R.drawable.chord_e_major, R.raw.chord_e_major),
+        Chord(2, "D", "Re Mayor", ChordType.MAJOR, Note.D, R.drawable.chord_d_major, R.raw.chord_d_major),
+        Chord(3, "E", "Mi Mayor", ChordType.MAJOR, Note.E, R.drawable.chord_e_major, R.raw.chord_e_major),
 
 
         // Acordes Menores

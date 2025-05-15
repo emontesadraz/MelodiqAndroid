@@ -6,81 +6,76 @@
             android:viewportHeight="240">
 
             <path
-                android:fillColor="#FFFFFF"
+                android:fillColor="@color/ic_melodiq_background"
                 android:pathData="M0,0h200v240h-200z"/>
 
             <!-- Mástil y trastes -->
             <path
-                android:strokeColor="#000000"
+                android:strokeColor="@color/text_color"
                 android:strokeWidth="2"
                 android:pathData="M40,40h120v160h-120z"/>
 
             <!-- Trastes horizontales -->
             <path
-                android:strokeColor="#000000"
+                android:strokeColor="@color/icon_color"
                 android:strokeWidth="1.5"
                 android:pathData="M40,80h120"/>
             <path
-                android:strokeColor="#000000"
+                android:strokeColor="@color/icon_color"
                 android:strokeWidth="1.5"
                 android:pathData="M40,120h120"/>
             <path
-                android:strokeColor="#000000"
+                android:strokeColor="@color/icon_color"
                 android:strokeWidth="1.5"
                 android:pathData="M40,160h120"/>
 
             <!-- Líneas de cuerdas -->
             <path
-                android:strokeColor="#000000"
+                android:strokeColor="@color/icon_color"
                 android:strokeWidth="1"
                 android:pathData="M60,40v160"/>
             <path
-                android:strokeColor="#000000"
+                android:strokeColor="@color/icon_color"
                 android:strokeWidth="1"
                 android:pathData="M80,40v160"/>
             <path
-                android:strokeColor="#000000"
+                android:strokeColor="@color/icon_color"
                 android:strokeWidth="1"
                 android:pathData="M100,40v160"/>
             <path
-                android:strokeColor="#000000"
+                android:strokeColor="@color/icon_color"
                 android:strokeWidth="1"
                 android:pathData="M120,40v160"/>
             <path
-                android:strokeColor="#000000"
+                android:strokeColor="@color/icon_color"
                 android:strokeWidth="1"
                 android:pathData="M140,40v160"/>
 
             <!-- Dedos - Reemplazando círculos con paths -->
             <path
-                android:fillColor="#000000"
+                android:fillColor="@color/text_color"
                 android:pathData="M80,100 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0"/> <!-- 5ta cuerda, traste 2 -->
             <path
-                android:fillColor="#000000"
+                android:fillColor="@color/text_color"
                 android:pathData="M100,100 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0"/> <!-- 4ta cuerda, traste 2 -->
             <path
-                android:fillColor="#000000"
+                android:fillColor="@color/text_color"
                 android:pathData="M120,60 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0"/> <!-- 3ra cuerda, traste 1 -->
 
             <!-- Cuerdas abiertas - Reemplazando círculos con paths -->
             <path
-                android:strokeColor="#000000"
+                android:strokeColor="@color/text_color"
                 android:strokeWidth="1.5"
-                android:fillColor="#FFFFFF"
+                android:fillColor="@color/ic_melodiq_background"
                 android:pathData="M60,20 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0"/> <!-- 6ta -->
             <path
-                android:strokeColor="#000000"
+                android:strokeColor="@color/text_color"
                 android:strokeWidth="1.5"
-                android:fillColor="#FFFFFF"
+                android:fillColor="@color/ic_melodiq_background"
                 android:pathData="M140,20 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0"/> <!-- 2da -->
             <path
-                android:strokeColor="#000000"
+                android:strokeColor="@color/text_color"
                 android:strokeWidth="1.5"
-                android:fillColor="#FFFFFF"
+                android:fillColor="@color/ic_melodiq_background"
                 android:pathData="M160,20 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0"/> <!-- 1ra -->
-
-            <!-- Texto - Reemplazado con path que dibuja la letra E -->
-            <path
-                android:fillColor="#000000"
-                android:pathData="M90,200h20v3h-17v8h15v3h-15v8h17v3h-20z"/>
         </vector>
