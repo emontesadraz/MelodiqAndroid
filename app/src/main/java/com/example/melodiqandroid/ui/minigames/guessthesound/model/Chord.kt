@@ -29,11 +29,11 @@ data class Chord(
             return listOf(
                 Chord("c_major", "Do Mayor", "C", R.raw.chord_c_major),
                 Chord("g_major", "Sol Mayor", "G", R.raw.chord_g_major),
-                Chord("a_minor", "La menor", "Am", R.raw.chord_a_major),
+                Chord("a_major", "La Mayor", "A", R.raw.chord_a_major),
                 Chord("f_major", "Fa Mayor", "F", R.raw.chord_f_major),
-                Chord("d_minor", "Re menor", "Dm", R.raw.chord_d_major),
+                Chord("d_major", "Re Mayor", "D", R.raw.chord_d_major),
                 Chord("e_major", "Mi Mayor", "E", R.raw.chord_e_major),
-                Chord("b_minor", "Si menor", "Bm", R.raw.chord_b_major)
+                Chord("b_major", "Si Mayor", "B", R.raw.chord_b_major)
             )
         }
     }
