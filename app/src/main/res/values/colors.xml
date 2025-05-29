@@ -10,4 +10,6 @@
     <color name="icon_color">#F17A36</color>
     <color name="text_color">#F1EDE6</color>
     <color name="stop_color">#A60707</color>
+    <color name="correct_answer">#4CAF50</color>
+    <color name="incorrect_answer">#F44336</color>
 </resources>

@@ -39,4 +39,9 @@
                     android:name="com.example.melodiqandroid.ui.chords.view.ChordDetailFragment"
                     android:label="Detalle del Acorde"
                     tools:layout="@layout/fragment_chord_detail" />
+        <fragment
+            android:id="@+id/navigation_minigame"
+            android:name="com.example.melodiqandroid.ui.minigames.guessthesound.view.ChordGameFragment"
+            android:label="@string/title_minigame"
+            tools:layout="@layout/fragment_minigame" />
     </navigation>

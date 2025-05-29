@@ -4,6 +4,8 @@
     <string name="title_home">Inicio</string>
     <string name="title_metronome">Metrónomo</string>
     <string name="title_tuner">Afinador</string>
+    <string name="title_minigame">Minijuego</string>
+    <string name="play_chord_sample">Reproducir muestra del acorde</string>
 
     <!-- Nuevos strings para la biblioteca de acordes -->
     <string name="title_chords_library">Biblioteca de Acordes</string>

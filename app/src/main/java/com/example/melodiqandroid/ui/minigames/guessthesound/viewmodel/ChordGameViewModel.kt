@@ -23,7 +23,7 @@ class ChordGameViewModel(application: Application) : AndroidViewModel(applicatio
     private val chordRepository = ChordRepository(application)
 
     // Número total de rondas en una partida
-    private val totalRounds = 10
+    private val totalRounds = 5
 
     // Número de opciones de acordes a mostrar
     private val numberOfOptions = 4

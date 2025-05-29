@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-        <menu xmlns:android="http://schemas.android.com/apk/res/android">
-            <item
-                android:id="@+id/navigation_home"
-                android:icon="@drawable/ic_home_24dp"
-                android:title="@string/title_home" />
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_24dp"
+        android:title="@string/title_home" />
 
-            <item
-                android:id="@+id/navigation_dashboard"
-                android:icon="@drawable/ic_tuner"
-                android:title="@string/title_tuner" />
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:icon="@drawable/ic_tuner"
+        android:title="@string/title_tuner" />
 
-            <item
-                android:id="@+id/navigation_notifications"
-                android:icon="@drawable/ic_metronome"
-                android:title="@string/title_metronome" />
+    <item
+        android:id="@+id/navigation_notifications"
+        android:icon="@drawable/ic_metronome"
+        android:title="@string/title_metronome" />
 
-            <item
-                android:id="@+id/navigation_chords_library"
-                android:icon="@drawable/iconoacordes"
-                android:title="@string/title_chord_library" />
-        </menu>
+    <item
+        android:id="@+id/navigation_chords_library"
+        android:icon="@drawable/iconoacordes"
+        android:title="@string/title_chord_library" />
+
+    <item
+        android:id="@+id/navigation_minigame"
+        android:icon="@drawable/ic_game"
+        android:title="@string/title_minigame" />
+</menu>
