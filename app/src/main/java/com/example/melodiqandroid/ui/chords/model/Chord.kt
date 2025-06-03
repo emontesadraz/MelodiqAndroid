@@ -1,13 +1,17 @@
 package com.example.melodiqandroid.ui.chords.model
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 
+@Entity(tableName = "chords")
 data class Chord(
+    @PrimaryKey
     val id: Int,
     val name: String,           // Nombre del acorde (Ej: "C", "Am", "G7")
     val displayName: String,    // Nombre para mostrar (Ej: "Do", "La menor", "Sol séptima")
     val type: ChordType,        // Tipo de acorde (mayor, menor, séptima, etc.)
     val root: Note,             // Nota raíz
-    val diagramResourceId: Int, // ID del recurso de imagen del diagrama
-    val soundResourceId: Int    // ID del recurso de sonido
+    val diagramImagePath: String, // Ruta del archivo de imagen en storage interno
+    val soundFilePath: String     // Ruta del archivo de sonido en storage interno
 )
 
 enum class Note {

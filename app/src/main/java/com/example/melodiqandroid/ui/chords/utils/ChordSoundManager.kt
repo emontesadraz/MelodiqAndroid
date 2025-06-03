@@ -1,11 +1,11 @@
 package com.example.melodiqandroid.ui.chords.utils
 
-
 import android.content.Context
 import android.media.MediaPlayer
 import com.example.melodiqandroid.ui.chords.model.Chord
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import java.io.File
 
 class ChordSoundPlayer(private val context: Context) {
 
@@ -19,11 +19,20 @@ class ChordSoundPlayer(private val context: Context) {
             // Liberar recursos si hay un MediaPlayer activo
             releaseMediaPlayer()
 
+            // Verificar que el archivo de sonido existe
+            val soundFile = File(chord.soundFilePath)
+            if (!soundFile.exists()) {
+                throw Exception("Archivo de sonido no encontrado: ${chord.soundFilePath}")
+            }
+
             // Crear y configurar un nuevo MediaPlayer
-            mediaPlayer = MediaPlayer.create(context, chord.soundResourceId)
-            mediaPlayer?.setOnCompletionListener { mp ->
-                mp.release()
-                mediaPlayer = null
+            mediaPlayer = MediaPlayer().apply {
+                setDataSource(chord.soundFilePath)
+                setOnCompletionListener { mp ->
+                    mp.release()
+                    mediaPlayer = null
+                }
+                prepare()
             }
 
             // Reproducir el sonido

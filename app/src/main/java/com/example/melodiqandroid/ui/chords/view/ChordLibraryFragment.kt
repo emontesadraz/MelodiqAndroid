@@ -1,7 +1,6 @@
 package com.example.melodiqandroid.ui.chords.view
 
 import com.example.melodiqandroid.ui.chords.model.Chord
-import com.example.melodiqandroid.ui.chords.model.ChordRepository
 import com.example.melodiqandroid.ui.chords.model.Note
 import com.example.melodiqandroid.ui.chords.view.adapter.ChordAdapter
 import com.example.melodiqandroid.ui.chords.viewmodel.ChordViewModel
